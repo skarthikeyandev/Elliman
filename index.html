@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Dougles Elliman</title>
+    <!-- Fav icon -->
+    <link rel="shortcut icon" href="./assets/images/favicon-removebg-preview.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&amp;v=1639564172328" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom styling -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- Main container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+
+            <div class="header-content">
+                <a href="#">ALL ELLIMAN AGENTS </a>
+                <i class="fas fa-angle-right"></i>
+                <h1>FIND A NEW YORK AGENT</h1>
+                <p>Find an agent with local expertise and block-by-block knowledge of every
+                 neighborhood in New York City.</p>
+            </div>
+            <div class="search">
+                <div class="search-bar">
+                   <i class="fas fa-search"></i>
+                   <input type="text" placeholder="Enter the name of an agent" id="myInput" class="search-input">
+ 
+                   <span class="material-icons-outlined  close">
+                    close
+                    </span>
+
+                </div>            
+               <div class="search-button-container">
+                   <button id="search" type="button" class="search-button" >Search</button>
+               </div>
+           </div> 
+
+        </header>
+        <!-- Main Section -->
+        <main class="wrapper">
+            <!-- Button Content -->
+            <div class="button-content">
+                
+                <ul id="nav">
+
+                    <!-- content in dynamic -->
+
+                </ul>
+            </div>
+
+            <!-- Profile Container -->
+            
+            <div id="profile-container" class="profile-container" >
+
+                <!-- content in dynamic -->
+                
+            </div> 
+
+            <div class="hide-container hide">
+
+               <img src="./assets/images/search.png" alt="search">
+               <h2>Your search for associates in New York returned no results with your selected criteria.</h2>
+               <button class="close">Reset Search</button>
+
+            </div>
+     
+        </main>
+    </div>
+   <script src="./assets/js/jquery-3.6.0.min.js"></script>
+   <script src="./assets/js/index.js"></script>
+</body>
+</html>

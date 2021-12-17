@@ -1,0 +1,458 @@
+@import "./Partials/partials.scss";
+// font-family
+@font-face {
+  font-family: "superiortitle";
+  src: url("../fonts/superiortitle-light.woff2");
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../fonts/Avenir-Next-LT-Pro-Bold_5182.ttf");
+}
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.woff");
+}
+
+* {
+  @include margin(0);
+  @include padding(0);
+  box-sizing: border-box;
+  @include font-size(16px);
+  font-family: sans-serif;
+}
+::placeholder {
+  color: #0c2a3c;
+}
+.hide{
+  @include display($none);
+}
+
+
+a {
+  text-decoration: $none;
+  cursor: pointer;
+}
+
+li {
+  list-style: $none;
+}
+// container
+.container {
+  // Header
+  @include background-color($top-background);
+
+  .header {
+    text-align: $center;
+   
+    .header-content {
+      max-width: 35%;
+      margin: 0 auto;
+      @include padding(40px 0 0 20px);
+      a,
+      h1 {
+        @include padding(20px 0);
+      }
+      a {
+        letter-spacing: 2px;
+        @include color($blue);
+        @include font-size(0.9em);
+      }
+      h1 {
+        @include font-size(1.25em);
+        line-height: 1.375;
+        letter-spacing: 8px;
+        font-family: "AvenirNext", Helvetica, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        @include color($skyblue);
+      }
+      p {
+        @include font-size(1.125em);
+        line-height: 1.5;
+        font-weight: 400;
+        font-style: normal;
+        @include color(#08202c);
+        letter-spacing: 1px;
+        font-family: sans-serif;
+      }
+      i{
+        color: $skyblue;
+        font-size: 13px;
+      }
+    }
+    .search {
+      position: relative;
+      max-width: 72%;
+      @include padding(40px 0 40px 0);
+      @include margin(0 auto);
+      @include display(inline-block);
+      .search-bar {
+        position: relative;
+        width: 100%;
+        @include display(table-cell);
+        border-bottom: 2px solid $skyblue;
+        
+        i {
+          position: absolute;
+          left: 0px;
+          top: 15px;
+          padding: 5px;
+          font-size: 1.125em;
+         @include color($skyblue);
+        }
+        .close{
+          padding: 5px;
+          position: absolute;
+          right: 0;
+          top: 15px;
+          display: none;
+          font-size: 28px;
+          color: #7f7f7f;
+        }
+        .search-input {
+          width: 100%;
+          @include padding(10px 30px);
+          border: $none;
+          font-weight: 500;
+          @include font-size(2em);
+          background: transparent;
+          font-family: "superiortitle";
+          height: 55px;
+          outline: $none;
+          cursor: text;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-height: normal;
+         
+        }
+      }
+      .search-button-container {
+        @include padding(0 0 0 10px);
+        @include display(table-cell);
+        button {
+          @include color($top-background);
+
+          @include background-color($skyblue);
+          @include padding(15px 55px);
+          @include margin(0);
+          border: $none;
+          border-radius: 2px;
+          cursor: pointer;
+          &:hover{
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  } // Header ends
+
+  // wrapper start
+  .wrapper {
+    // button content start
+    background-color: $white;
+
+    .button-content {
+      ul {
+        @include padding(20px 0);
+        text-align: $center;
+      }
+      li {
+        @include display(inline-block);
+        @include font-size(0.75em);
+        border-right: 1px solid $brown;
+        font-weight: 500;
+        line-height: 0.75em;
+        text-transform: uppercase;
+        @include padding(0 16px);
+        letter-spacing: 6px;
+        &:last-child {
+          border-right: $none;
+        }
+        
+      }
+      a {
+        @include font-size(1em);
+        @include color($blue);
+        
+        &:hover {
+          @include color($skyblue);
+        }
+        // &:first-child{
+        //   @include color($skyblue);
+        // }
+        
+      }
+      
+      .alphalist{
+        @include color($skyblue);
+      }
+      
+    } // button-content finish
+
+    // profile-container start
+    .profile-container {
+      max-width: 75%;
+      margin: 0 auto;
+      .no-data-found{
+        @include display($none);
+        position: relative;
+        padding: 10%;
+        width: 100%;
+        text-align: $center;
+        color: #ff0000;
+        i{
+          font-size: 3rem;
+          color:#ff0000;
+          @include padding(20px);
+        }
+        h2{
+          font-size: 1rem;
+          font-weight: normal;
+          b{
+            text-transform:uppercase;
+          }
+        }
+      }
+      .agent-container {
+        font-family: "AvenirNext", sans-serif;
+        @include padding(16px);
+        @include display(inline-block);
+        width: 25%;
+        .agent-image{
+          box-shadow: 0 2px 7px rgb(0 0 0 / 8%), 0 0px 7px rgb(0 0 0 / 8%);
+
+        img{
+         
+          height: 100%;
+          width: 100%;
+        }
+        }
+        .agent-contents {
+          @include background-color(#fbfbfb);
+          @include padding(15px 20px 10px);
+          box-shadow: 0 2px 7px rgb(0 0 0 / 8%), 0 0px 7px rgb(0 0 0 / 8%);
+
+          h3 {
+            @include font-size(1.125em);
+            @include padding(0 0 5px);
+            font-weight: 600;
+            font-family: "AvenirNext", Helvetica, sans-serif;
+            line-height: 1.2;
+            &:hover {
+              @include color($skyblue);
+              cursor: pointer;
+            }
+          }
+
+          a {
+            @include display(block);
+            letter-spacing: 0;
+            font-weight: 400;
+            @include color($skyblue);
+            @include font-size(1em);
+            overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            @include padding(5px 0 0 0);
+          }
+
+          p {
+            @include color($brown);
+            @include padding(0 0 16px 0);
+            @include font-size(0.75em);
+          }
+        }
+      }
+    } //profile-content finish
+    .hide-container{
+      text-align: $center;
+      padding: 150px 0;
+      h2{
+        padding: 20px 0;
+      }
+      button{
+        @include color($top-background);
+
+        @include background-color($skyblue);
+        @include padding(15px 55px);
+        @include margin(0);
+        border: $none;
+        border-radius: 2px;
+        cursor: pointer;
+        &:hover{
+          opacity: 0.9;
+        }
+      }
+      
+    }
+
+  } // wrapper finish
+}
+//  big devicees responsive
+@media screen and(min-width:2400px) {
+  .container{
+    .header{
+      .search{
+        max-width: 50%;
+      }
+    }
+    .wrapper{
+      .button-content{
+        max-width: 50%;
+        margin: 0 auto;
+        li{
+          padding: 0 36px;
+        }
+      }
+      .profile-container{
+        max-width: 50%;     
+      }
+      
+    }
+  }
+}
+// desktop responsive
+@media only screen  and (max-width:1024px){
+  .container{
+    .header{
+      .header-content{
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 40px 0 0 20px;   
+         }
+         .search{
+          position: relative;
+          max-width: 100%;
+          padding: 40px 20px 40px;
+          margin: 0 auto;
+          display: inline-block;
+        }
+        }
+        .wrapper{
+          .profile-container{
+            max-width: 100%;
+          }
+        }
+        
+      }
+}
+// tab responsive
+@media only screen  and (max-width:768px){
+   .container{
+    //  header
+     .header{
+       .header-content{
+         max-width: 100%;
+       }
+       .search{
+         max-width: 100%;
+         @include padding(20px);
+       }
+     }
+    //  wrapper
+    .wrapper{
+      .profile-container{
+        max-width: 100%;
+        .agent-container{
+           width: 50%;
+           @include display(inline-flex);
+           img{
+             width: 100%;
+             height: 100%;             
+             object-fit: cover;
+           }
+           .agent-contents{
+            max-width: 50%;
+            h3{
+                  @include padding(0 0 25px 0);
+              }
+              a {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                @include padding(5px 0 0 0);
+              }            
+              p {
+                @include display($none);
+              }                       
+           }
+        }
+      }
+    }
+   }
+}
+// mobile responsive
+@media only screen and (max-width: 480px) {
+  .container {
+    .header {
+      @include padding(16px);
+      .header-content {
+        max-width: 100%;
+        @include padding(0);
+      }
+      .search {
+        max-width: 100%;
+        @include font-size(18px);
+        @include padding(0);
+
+        .search-bar {
+          @include display(block);
+          max-width: 100%;
+          .search-input {
+            @include font-size(25px);
+          }
+        }
+        .search-button-container {
+          @include display(block);
+          @include margin(10px 0);
+          max-width: 100%;
+          @include padding(0);
+          .search-button {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .wrapper {
+      .profile-container {
+         max-width: 100%;
+        .agent-container{
+          @include display(flex);
+          box-shadow: 4px 4px 3px #ccc;
+          width: 100%;
+          
+          img{
+            width: 100%;
+            height: 100%;
+           
+          }
+          .agent-image {
+            box-shadow: none;
+            width: 50%;
+          }
+          .agent-contents {
+            box-shadow: none;
+            width: 50%;
+
+           
+            h3{
+              @include padding(0 0 25px 0);
+            }
+            a {
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              @include padding(5px 0 0 0);
+            }
+            p {
+              @include display($none);
+            }
+        }
+        
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,23 @@
+@mixin padding($padding){
+    padding: $padding;
+}
+// margin
+@mixin margin($margin) {
+    margin: $margin;
+}
+// background-color 
+@mixin background-color($background-color) {
+    background-color: $background-color;
+}
+// color 
+@mixin color($color) {
+    color: $color;
+}
+// display
+@mixin display($display){
+    display: $display;
+}
+// font size
+@mixin font-size($font-size) {
+    font-size: $font-size;
+}
